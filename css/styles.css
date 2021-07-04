@@ -1,0 +1,26 @@
+/** @format */
+
+.header,
+.main-content,
+.sidebar,
+.footer {
+  padding: 20px;
+  position: relative;
+}
+.header {
+  background-color: #efe;
+}
+.main {
+  display: flex;
+}
+.main-content {
+  background-color: #fee;
+  width: 75%;
+}
+.sidebar {
+  background-color: #eef;
+  width: 25%;
+}
+.footer {
+  background-color: #fff;
+}

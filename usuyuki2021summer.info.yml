@@ -1,0 +1,17 @@
+# @format
+
+name: うすゆきポートフォリオテーマ2021夏
+type: theme
+description: "Drupal9対応のうすゆきポートフォリオテーマです。"
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - usuyuki2021summer/global-styling
+base theme: classy
+regions:
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+logo: images/logo.png
+screenshot: images/screenshot.png
