@@ -1,10 +1,6 @@
-# @format
-
 global-styling:
-  version: 1.x
-  css:
-    theme:
-      css/tailwind.css: {}
-      css/styles.css: {}
-  js:
-    js/index.js: {}
+ version: 1.x
+ css:
+   theme:
+     css/tailwind.css: {}
+     css/styles.css: {}
