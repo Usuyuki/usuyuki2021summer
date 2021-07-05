@@ -4,3 +4,7 @@ global-styling:
    theme:
      dist/tailwind_usuyuki.css: {}
      css/styles.css: {}
+global-scripts:
+  version: 1.x
+  js: 
+    runSwiper.js: {}  
