@@ -2,5 +2,5 @@ global-styling:
  version: 1.x
  css:
    theme:
-     css/tailwind.css: {}
+     dist/tailwind_usuyuki.css: {}
      css/styles.css: {}
