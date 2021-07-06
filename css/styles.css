@@ -1,4 +1,10 @@
 /** @format */
+
+html{
+  /* tailwindの設定だと変なフォントになるので */
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", Meiryo, sans-serif;
+}
 .header,
 .main-content,
 .sidebar,
@@ -26,4 +32,16 @@
 
 .test-css{
   color:pink;
+}
+
+/* フォント */
+.kiwi-maru{
+  font-family: 'Kiwi Maru', serif;
+}
+
+.shippori-mincho{
+  font-family: 'Shippori Mincho', serif;
+}
+.yomogi{
+  font-family: 'Yomogi', cursive;
 }
