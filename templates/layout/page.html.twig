@@ -47,9 +47,10 @@
 #}
 <div class="tw-container tw-mx-auto tw-p-4">
 
-  <header role="banner">
+  <header role="banner" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
+
+    <p class="text-center">うすゆきポートフォリオ</p>
     {{ page.header }}
-  </header>
 
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
@@ -59,6 +60,7 @@
   {{ page.highlighted }}
 
   {{ page.help }}
+  </header>
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -84,7 +86,7 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer class="footer-img" role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
       {{ page.footer }}
     </footer>
   {% endif %}
