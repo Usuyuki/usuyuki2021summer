@@ -48,19 +48,22 @@
 <div class="tw-container tw-mx-auto tw-p-4">
 
   <header role="banner" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
-
-    <p class="text-center">うすゆきポートフォリオ</p>
+  <div class="w-full">
+  <h2 class="text-right text-3xl text-white my-4 mr-2">USUYUKI<br>PORTFOLIO</h2>
+  </div>
+ 
     {{ page.header }}
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {# {{ page.primary_menu }} #}
+  {# {{ page.secondary_menu }} #}
 
-  {{ page.breadcrumb }}
+  {# {{ page.breadcrumb }} #}
 
-  {{ page.highlighted }}
+  {# {{ page.highlighted }} #}
 
-  {{ page.help }}
+  {# {{ page.help }} #}
   </header>
+  <h2 class="text-center text-4xl my-20 kiwi-maru">うすゆきです。</h2>
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}

@@ -1,16 +1,47 @@
 /** @format */
+:root{
+  --bg-main-color:#fff9f2;
+  --bg-secondary-color:#deffd6;
+  --text-main-color:#3e3a39;
+  --text-secondary-color:#f2dec3;
+  --text-alert-color:#f1a008;
+}
+
+.bg-main-color{
+  background-color: var(--bg-main-color);
+}
+
+.bg-secondary-color{
+  background-color: var(--bg-secondary-color);
+}
+
+.text-main-color{
+  color: var(--text-main-color);
+}
+
+.text-secondary-color{
+  color: var(--text-secondary-color);
+}
+.text-alert-color{
+  color: var(--text-alert-color);
+}
+
 
 html{
   /* tailwindの設定だと変なフォントになるので */
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
   "Hiragino Sans", Meiryo, sans-serif;
+  color: var(--text-main-color);
 }
 header{
+  color:var(--bg-main-color);
     background-repeat: no-repeat;
     /* background-position:center; */
     background-size: cover;
     display: flex;
-    width: 100vw;
+    flex-wrap: wrap;
+    width: 100%; 
+    /* 100vwにするとhtmlはみだしちゃう */
     height: auto;
 }
 .footer-img{
@@ -19,7 +50,7 @@ header{
   background-position:bottom center;
   background-size: cover;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 400px;
 }
 .header,

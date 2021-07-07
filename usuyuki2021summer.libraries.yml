@@ -8,4 +8,5 @@ global-styling:
 global-scripts:
   version: 1.x
   js: 
-    dist/bundle.js: {}  
+    # dist/bundle.js: {}  
+    runSwiper.js: {}  
