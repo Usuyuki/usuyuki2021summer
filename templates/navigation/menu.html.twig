@@ -30,7 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap playfair">
     {% else %}
       <ul class="menu">
     {% endif %}
@@ -39,6 +39,7 @@
         set classes = [
           'menu-item',
           'mx-4',
+          'text-xl',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
