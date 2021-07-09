@@ -45,16 +45,20 @@
  * @ingroup themeable
  */
 #}
-<div class="tw-container tw-mx-auto tw-p-4">
+<style>
+.pager{
+  display:none;
+}
+</style>
 
+<div class="tw-container tw-mx-auto tw-p-4">
   <header id="usuyuki-page-top" role="banner" class="pt-2"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
   <div class="w-full flex justify-between">
-  <h1 class="text-2xl shippori-mincho yomogi ml-4">うすゆきポートフォリオ</h1>
+  <h2 class="text-2xl shippori-mincho yomogi ml-4"><a href="/">うすゆきポートフォリオ</a></h2>
   <div class="md:mr-12">
     {{ page.header }}
   </div>
   </div>
-  <h2 class="w-full text-right text-3xl text-white my-4 mr-2 playfair">USUYUKI<br>PORTFOLIO</h1>
 
 
 
@@ -72,19 +76,34 @@
 
   <h3 class="text-center text-2xl my-20 kiwi-maru">Latest Works</h3>
   <main role="main">
-  <div class="frontpage-thub">
+  {# <div class="flex justify-center flex-wrap w-100"> #}
+  <div class="frontpage-thub ">
     {{ page.content }}
    </div>
+   {# </div> #}
   </main>
 
-  {% if page.footer %}
-    <footer class="footer-img mt-4 flex-row flex-wrap justify-center py-4 w-100 items-end" role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
-      <div>
+ {% if page.footer %}
+    <footer class="footer-img relative mt-4  py-4  " role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
 
+   <div class="bubbles ">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="w-full flex items-center justify-end   z-10">
+    <a href="#usuyuki-page-top" class="">
+     <img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
+    </div>
+   <div class="mx-auto flex items-end">
       {{ page.footer }}
       </div>
-  
+
     </footer>
+ 
   {% endif %}
 
 </div>{# /.layout-container #}
