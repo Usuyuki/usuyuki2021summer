@@ -47,7 +47,7 @@
 #}
 <div class="tw-container tw-mx-auto tw-p-4">
 
-  <header role="banner" class="pt-2"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
+  <header id="usuyuki-page-top" role="banner" class="pt-2"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
   <div class="w-full flex justify-between">
   <h1 class="text-2xl shippori-mincho yomogi ml-4">うすゆきポートフォリオ</h1>
   <div class="md:mr-12">
@@ -72,31 +72,18 @@
 
   <h3 class="text-center text-2xl my-20 kiwi-maru">Latest Works</h3>
   <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="md:tw-flex tw--mx-4">
-      <div class="md:tw-flex-1 tw-p-4">
-        {{ page.content }}
-        {{ content.	field_works_tech }}
-      </div>{# /.layout-content #}
-
-      {% if page.sidebar_first %}
-        <aside class="md:tw-w-1/4 tw-p-4" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="md:tw-w-1/4" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-    </div>
+  <div class="frontpage-thub">
+    {{ page.content }}
+   </div>
   </main>
 
   {% if page.footer %}
-    <footer class="footer-img" role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
+    <footer class="footer-img mt-4 flex-row flex-wrap justify-center py-4 w-100 items-end" role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
+      <div>
+
       {{ page.footer }}
+      </div>
+  
     </footer>
   {% endif %}
 

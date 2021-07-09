@@ -9,4 +9,5 @@ global-scripts:
   version: 1.x
   js: 
     # dist/bundle.js: {}  
-    runSwiper.js: {}  
+    # runSwiper.js: {}  
+    js/index.js: {}  

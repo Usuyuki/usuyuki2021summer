@@ -43,10 +43,12 @@
 font-family: 'Shippori Mincho', serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Yomogi', cursive;-->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Shippori+Mincho:wght@500&family=Yomogi&family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <!--swiperのcss -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {#
@@ -101,5 +103,6 @@ font-family: 'Yomogi', cursive;-->
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
+    
   </body>
 </html>

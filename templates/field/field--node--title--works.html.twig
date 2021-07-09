@@ -23,13 +23,13 @@
   set classes = [
     'field',
     'kiwi-maru',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
+    'text-center',
+    'text-5xl',
+    'my-12',
   ]
 %}
-<span{{ attributes.addClass(classes) }}>
+<h1{{ attributes.addClass(classes) }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
-</span>
+</h1>

@@ -17,10 +17,60 @@
 
 </script> #}
 
-  <div class="flex justify-center flex-wrap"> 
+<!-- スライダーのメインコンテナの div 要素 -->
+<div class="swiper-container my-4" id="works_gallery"> 
+  <!-- ラッパーの（スライドを囲む） div 要素 -->
+  <div class="swiper-wrapper"> 
+    <!-- それぞれのスライドの div 要素 -->
   {%- for item in items -%}
-    <div class="md:w-1/2 w-full">
+    <div class="swiper-slide">
     {{ item.content }}
     </div>
   {%- endfor -%}
   </div>
+  <!-- ページネーションの div 要素 -->
+  <div class="swiper-pagination"></div>
+ 
+  {# <!-- ナビゲーションボタンの div 要素-->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+ 
+  <!-- スクロールバーの div 要素 -->
+  <div class="swiper-scrollbar"></div> #}
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    
+let works_swiper = new Swiper ('#works_gallery', {
+  // デフォルトの設定
+  slidesPerView: 1,
+  spaceBetween: 0,
+  
+  // レスポンシブブレーポイント（画面幅による設定）
+  breakpoints: {
+    // 画面幅が 640px 以上の場合（window width >= 640px）
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 5
+    },
+    // 画面幅が 980px 以上の場合（window width >= 980px）
+    980: {
+      slidesPerView: 1.75,
+      spaceBetween: 10
+    }
+  },
+   autoplay: {
+    delay: 3000,
+  },
+  
+
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  
+})
+    </script>

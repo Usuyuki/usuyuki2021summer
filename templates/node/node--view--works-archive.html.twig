@@ -72,22 +72,34 @@
 #}
 
 {# トップページの記事のループ #}
+<article class="border-2 border-blue-600">
 
-  
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
 
-    <figure class="effect-layla">
-    {{ content.field_works_thumbnail }}
-        <figcaption>
-          {# <h2>Crazy <span>Layla</span></h2> #}
-          <p >{{content.field_works_genre[0]}}</p>
-          <h2 >  {{ label[0] }}</h2>
-          <p>{{content.field_works_deploy_start}}</p>
-          <a href="{{ url }}">View more</a>
-          {# でぷろい
-          じゃんる
-          ぎじゅつ #}
-        </figcaption>			
-    </figure>
-
-
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+<div class="frontpage-thub">
+{{ content.field_works_thumbnail }}
+<figure class="effect-layla">
+						<img src="{{ content.field_works_thumbnail }}" alt="サムネイル">
+						<figcaption>
+							{# <h2>Crazy <span>Layla</span></h2> #}
+							<p class="text-2xl">{{content.title}}</p>
+							<p>{{content.field_works_genre}}</p>
+							<p>{{content.field_works_deploy_start}}</p>
+							<a href="{{ url }}">View more</a>
+              {# でぷろい
+              じゃんる
+              ぎじゅつ #}
+						</figcaption>			
+					</figure>
+<div>
+</article>
 

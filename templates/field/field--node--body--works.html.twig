@@ -1,0 +1,16 @@
+
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+{# 作品本文 #}
+<div class="md:w-2/3 mx-auto my-20 p-4">
+  {% for item in items %}
+{{item.content}}
+
+  {%- endfor -%}
+</div>
+
+

@@ -33,6 +33,7 @@ html{
   "Hiragino Sans", Meiryo, sans-serif;
   color: var(--text-main-color);
   background-color: var(--bg-main-color);
+  scroll-behavior:smooth;
 }
 header{
   color:var(--bg-main-color);
@@ -52,8 +53,11 @@ header{
   background-position:bottom center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
+  /* 下向きに揃える↓ */
+  justify-content: flex-end;
   width: 100%;
-  height: 400px;
+  height: 450px;
 }
 .header,
 .main-content,
@@ -100,27 +104,36 @@ header{
 }
 
 
+/* swiperの点 */
+.swiper-pagination-bullet{
+	/* background-color: var(--bg-secondary-color)!important; */
+}
+.swiper-pagination-bullet-active{
+	background-color:#C4DDF2!important;
+}
 /* トップページのサムネ動き */
 
 .frontpage-thub {
 	position: relative;
 	margin: 0 auto;
-	padding: 1em 0 4em;
+	padding: 1em 0 1em;
 	max-width: 1000px;
 	list-style: none;
 	text-align: center;
 }
 
-/* Common style */
+
 .frontpage-thub figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
-	min-width: 320px;
+	/* min-width: 320px;
 	max-width: 480px;
 	max-height: 360px;
-	width: 48%;
+	width: 48%; */
+	width: 300px;
+	height: 300px;
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
@@ -129,6 +142,7 @@ header{
 .frontpage-thub figure img {
 	position: relative;
 	display: block;
+	object-fit: cover;
 	min-height: 100%;
 	max-width: 100%;
 	opacity: 0.8;
@@ -136,7 +150,7 @@ header{
 
 .frontpage-thub figure figcaption {
 	padding: 2em;
-	color: #fff;
+	color: var(--bg-main-color);
 	text-transform: uppercase;
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
@@ -187,7 +201,7 @@ header{
 }
 
 figure.effect-layla {
-	background: #18a367;
+	background: rgb(43, 43, 43);
 }
 
 figure.effect-layla img {
@@ -210,8 +224,8 @@ figure.effect-layla figcaption::before {
 	right: 30px;
 	bottom: 50px;
 	left: 30px;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+	border-top: 1px solid var(--bg-main-color);
+	border-bottom: 1px solid var(--bg-main-color);
 	-webkit-transform: scale(0,1);
 	transform: scale(0,1);
 	-webkit-transform-origin: 0 0;
@@ -223,8 +237,8 @@ figure.effect-layla figcaption::after {
 	right: 50px;
 	bottom: 30px;
 	left: 50px;
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
+	border-right: 1px solid var(--bg-main-color);
+	border-left: 1px solid var(--bg-main-color);
 	-webkit-transform: scale(1,0);
 	transform: scale(1,0);
 	-webkit-transform-origin: 100% 0;
@@ -232,7 +246,7 @@ figure.effect-layla figcaption::after {
 }
 
 figure.effect-layla h2 {
-	padding-top: 26%;
+	padding-top: 5%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
@@ -260,7 +274,7 @@ figure.effect-layla p {
 }
 
 figure.effect-layla:hover img {
-	opacity: 0.7;
+	opacity: 0.4;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
@@ -286,3 +300,122 @@ figure.effect-layla:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
+
+/* フッターの泡 */
+.bubbles {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	}
+	 
+	.bubble {
+	position: absolute;
+	bottom: -40;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid var(--bg-main-color);
+	border-radius: 50%;
+	animation: bubble 10s ease-in infinite;
+	}
+	 
+	.bubble:nth-child(1) {
+	width: 5px;
+	height: 5px;
+	left: 30%;
+	animation-duration: 6s;
+	}
+	 
+	.bubble:nth-child(2) {
+	left: 20%;
+	animation-duration: 3.5s;
+	}
+	 
+	.bubble:nth-child(3) {
+	width: 10px;
+	height: 10px;
+	left: 30%;
+	animation-duration: 7s;
+	}
+	 
+	.bubble:nth-child(4) {
+	width: 15px;
+	height: 15px;
+	left: 67%;
+	animation-duration: 6s;
+	}
+	 
+	.bubble:nth-child(5) {
+	width: 20px;
+	height: 20px;
+	left: 70%;
+	animation-duration: 4.5s;
+	}
+	 
+	@keyframes bubble {
+	  0% {
+		bottom: -100px;
+		transform: translateX(0);
+	  }
+	  50% {
+		transform: translateX(100px);
+	  }
+	  100% {
+		bottom: 1000px;
+	  }
+	}
+
+	/* フッターの魚 */
+.footer-fish{
+	object-fit: contain;
+	width: 50px;
+	height: auto;
+}
+
+/* ヘッダーメニュー */
+/* メニューのデザイン*/
+.drawer-content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 100%; /* メニューを画面の外に飛ばす */
+	z-index: 99;
+	background: rgb(184, 184, 184);
+	transition: 0.5s;
+  }
+  @media screen and (min-width: 768px) {
+	.drawer-content {
+	  height: 80px;
+	}
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer-check:checked ~ .drawer-content {
+	left: 0; /* メニューを画面に入れる */
+  }
+  
+  /* ここまでハンバーガーメニュー */
+  
+  /* カーソル点滅 */
+  .cursor {
+	animation: tenmetu 1s infinite;
+  }
+  @keyframes tenmetu {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 0;
+	}
+	51% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }

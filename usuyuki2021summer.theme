@@ -1,0 +1,27 @@
+<?php
+
+
+/**
+ * メニューのフラグメント(#)を許可する
+ * （メニューのリンク先に http://thissite/ を含めたときは、内部リンクに変換する）
+ *
+ * @see
+ *   http://drupal.org/node/325533#comment-3460720
+ */
+
+function phptemplate_menu_item_link($link) {
+
+  if (strpos($link['href'], 'http://thissite/') !== FALSE) {
+    $link['href'] = str_replace('http://thissite/', '', $link['href']);
+    $fragment = true;
+  }
+  
+  if (empty($link['localized_options'])) {
+    $link['localized_options'] = array();
+  }
+
+  return $fragment ? 
+   str_replace('%2523', '#', l($link['title'], $link['href'], $link['localized_options'])) :
+   l($link['title'], $link['href'], $link['localized_options']);     
+
+}
