@@ -46,64 +46,80 @@
  */
 #}
 <style>
-.pager{
-  display:none;
-}
+	.pager {
+		display: none;
+	}
 </style>
 
 <div class="tw-container tw-mx-auto tw-p-4">
-  <header id="usuyuki-page-top" role="banner" class="pt-2"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
-  <div class="w-full flex justify-between">
-  <h2 class="text-2xl shippori-mincho yomogi ml-4"><a href="/">うすゆきポートフォリオ</a></h2>
-  <div class="md:mr-12">
-    {{ page.header }}
-  </div>
-  </div>
+	<header id="usuyuki-page-top" role="banner" class="pt-2" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
+		<div class="w-full flex justify-between">
+			<h2 class="text-2xl shippori-mincho yomogi ml-4">
+				<a href="/">うすゆきポートフォリオ</a>
+			</h2>
+			<div class="md:mr-12">
+				{{ page.header }}
+			</div>
+		</div>
 
 
+		{# {{ page.primary_menu }} #}
+	{# {{ page.secondary_menu }} #}
 
-  {# {{ page.primary_menu }} #}
-  {# {{ page.secondary_menu }} #}
+		{# {{ page.breadcrumb }} #}
 
-  {# {{ page.breadcrumb }} #}
+		{# {{ page.highlighted }} #}
 
-  {# {{ page.highlighted }} #}
+		{# {{ page.help }} #}
+	</header>
+	<img src="{{ base_path ~ directory }}/images/top/portfolio_tegaki_animated.svg">
+	<h2 class="text-center text-4xl my-20 kiwi-maru">うすゆきです。</h2>
 
-  {# {{ page.help }} #}
-  </header>
-  <img src="{{ base_path ~ directory }}/images/top/portfolio_tegaki_animated.svg">
-  <h2 class="text-center text-4xl my-20 kiwi-maru">うすゆきです。</h2>
+	<h3 class="text-center text-2xl mt-20 kiwi-maru">Latest Works</h3>
+	<main
+		role="main">
+		{# <div class="flex justify-center flex-wrap w-100"> #}
+		<div
+			class="frontpage-thub ">
+			<!--
+						  下記デザインは 
+						  Copyright©2020Codrops
+						Released under the MIT license
+						http://tympanus.net/codrops/licensing/ -->
+			{{ page.content }}
+		</div>
+		{# </div> #}
+	</main>
+</div>
+<div class="mx-auto">
+	<a href="/works">
+		<p class="bg-secondary-color p-2 rounded-2xl">More</p>
+	</a>
+	<div>
 
-  <h3 class="text-center text-2xl my-20 kiwi-maru">Latest Works</h3>
-  <main role="main">
-  {# <div class="flex justify-center flex-wrap w-100"> #}
-  <div class="frontpage-thub ">
-    {{ page.content }}
-   </div>
-   {# </div> #}
-  </main>
+		{% if page.footer %}
 
- {% if page.footer %}
-    <footer class="footer-img relative mt-4  py-4  " role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
+			<footer class="footer-img relative mt-4  py-4  " role="contentinfo" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
 
-   <div class="bubbles ">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
+				<div class="bubbles ">
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+					<div class="bubble"></div>
+				</div>
 
-    <div class="w-full flex items-center justify-end   z-10">
-    <a href="#usuyuki-page-top" class="">
-     <img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
-    </div>
-   <div class="mx-auto flex items-end">
-      {{ page.footer }}
-      </div>
+				<div class="w-full flex items-center justify-end   z-10">
+					<a href="#usuyuki-page-top" class="">
+						<img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
+					</div>
+					<div class="mx-auto flex items-end">
+						{{ page.footer }}
+					</div>
 
-    </footer>
- 
-  {% endif %}
+				</footer>
 
-</div>{# /.layout-container #}
+			{% endif %}
+
+		</div>
+		{# /.layout-container #}

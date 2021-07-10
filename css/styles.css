@@ -120,13 +120,20 @@ header{
 }
 /* トップページのサムネ動き */
 
+/* 下記コードは
+Copyright©2020Codrops
+Released under the MIT license
+http://tympanus.net/codrops/licensing/  */
+
 .frontpage-thub {
 	position: relative;
 	margin: 0 auto;
-	padding: 0.5em 0 0.5em;
+	padding: 0 1em 0;
 	max-width: 1000px;
 	list-style: none;
 	text-align: center;
+	/* height: 0px; */
+	height: 100%;
 }
 
 

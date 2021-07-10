@@ -1,14 +1,13 @@
-
-    <article class="archive-img p-2 mx-4 my-8 flex justify-center items-center flex-wrap kiwi-maru ">
-    {{ content.field_works_thumbnail }}
-    <div class="m-4 archive-text-size " >
-          <h2 class="text-2xl yomogi font-bold my-2" >{{ label[0] }}</h2>
-          <p class="text-xl md:text-left text-center">{{content.field_works_deploy_start[0]}}</p>
-          <p class="text-xl">ジャンル:{{content.field_works_genre[0]}}</p>
-          <p class="text-xl">形態:{{content.field_works_scale[0]}}</p>
-          <p class="text-xl my-2">{{content.field_works_tech}}</p>
-          <div class="mt-6 text-center">
-          <a class=" p-2 my-4 bg-secondary-color rounded-2xl" href="{{ url }}">詳しく見る</a>
-          </div>
-    </div>
-    </article>
+<article class="archive-img p-2 mx-4 my-8 flex justify-center items-center flex-wrap kiwi-maru ">
+	{{ content.field_works_thumbnail }}
+	<div class="m-4 archive-text-size ">
+		<h2 class="text-2xl yomogi font-bold my-2">{{ label[0] }}</h2>
+		<p class="text-xl md:text-left text-center">{{content.field_works_deploy_start[0]}}</p>
+		<p class="text-xl">ジャンル:{{content.field_works_genre[0]}}</p>
+		<p class="text-xl">形態:{{content.field_works_scale[0]}}</p>
+		<p class="text-xl my-2">{{content.field_works_tech}}</p>
+		<div class="mt-6 text-center">
+			<a class=" p-2 my-4 bg-secondary-color rounded-2xl" href="{{ url }}">詳しく見る</a>
+		</div>
+	</div>
+</article>

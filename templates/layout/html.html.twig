@@ -32,77 +32,74 @@
   ]
 %}
 <!DOCTYPE html>
-<html{{ html_attributes }}>
-  <head>
-    <head-placeholder token="{{ placeholder_token }}">
-    <title>{{ head_title|safe_join(' | ') }}</title>
-    <css-placeholder token="{{ placeholder_token }}">
-    <js-placeholder token="{{ placeholder_token }}">
-    <!--Googleフォント-->
-    <!--font-family: 'Kiwi Maru', serif;
-font-family: 'Shippori Mincho', serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Yomogi', cursive;-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Shippori+Mincho:wght@500&family=Yomogi&family=Playfair+Display&display=swap" rel="stylesheet">
-  
-  <!--swiperのcss -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  </head>
-  <body{{ attributes.addClass(body_classes) }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <!-- 
-                                                                                                                                                                                                                                   
-        *****                                                                                                                                                                                      ***                             
-          ******:                                                                ***                                                              =***                                             ****                            
-             *******                                                             ****                                                             ****                                              +****                          
-                ******                                                           ****                                                             ****                                                ****      *******            
-                   ***                                                           ****             *                                               ***                                                  **************:             
-                                                                             ****************************                 ***+                   ********                                          ************                    
-                                                             ****  ***************************************                ***              +********************                              *********** ****                     
-                                                           *****************      ****                                   ****           *************     :********                          ******        -***+                   
-                                                          ********=               ****                                   ****        ******      ***-           ****                                         ****                  
-               .********                                                          ****                                   ****      *****         ***              ****                                        ****         ******* 
-         ******************                                                       ****                                   ****    *****           ***               ***-                                        ****-+***********   
-     **********        =*****                                             ************                                   ****   ****            ****                ***                                       ************         
-  *******                 ****                                          ***     ******                                   **** =***+             ****                ****                                +*************+            
- ****                      ****                                        **         ****                                   ********               ****                 ***                           :*********.     ****            
-                           ****                                       **          ****                                   *******                ****                 ***+                      +********            -***           
-                           ****                                      ***          ****                                   *******                ****                ****                    ********                  ***+         
-                           ****                                      ***          ****                                   ******                 ****                ***:                  *****                        ****        
-                           ****                                       **:         ****                                   *****=                 ****               ****                                                 ****       
-                           ****                                      ***          ****                                   *****                  ****              ****                                                 +****       
-                           ****                                     ***          *****                                   ****=                  ****             ****                                               ******+        
-                          -***                                      **-          *****                                   ****                   ****           *****                                               *****           
-                          ****                                     ***           *****                                   ****                    ***       .******                       ***                                       
-                         ****                                      .**-          *****                                   ***                     ***    *******                          ****+                                     
-                        +***                                        ***          ****-                                                           ***********                               ****+                                   
-                        ***                                          ***         ****                                                            *******                                     *****                                 
-                       ****                                            **=       ****                                                            ****                                          *****                               
-                      ****                                               ***********                                                             ****                                            ******                            
-                     ****                                                   **  ****                                                             ****                                              +*****                          
-                    ****                                                        ***                                                              ****                                                 ******                       
-                   ****                                                        ****                                                              ***=                                                    *****                     
-                  ****                                                         ***                                                                .                                                        ******                  
-                 ****                                                          ***                                                                                                                            *****                
-                :***                                                                                                                                                                                            ***                
-                                                                                                                                                                                                                                   
+<html{{html_attributes}}>
+	<head>
+		<head-placeholder token="{{ placeholder_token }}">
+			<title>{{ head_title|safe_join(' | ') }}</title>
+			<css-placeholder token="{{ placeholder_token }}">
+				<js-placeholder token="{{ placeholder_token }}">
+					<!--Googleフォント-->
+					<!--font-family: 'Kiwi Maru', serif;
+										font-family: 'Shippori Mincho', serif;
+										font-family: 'Playfair Display', serif;
+										font-family: 'Yomogi', cursive;-->
+					<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+					<link
+					href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Shippori+Mincho:wght@500&family=Yomogi&family=Playfair+Display&display=swap" rel="stylesheet">
 
-
-
-
--->
-    <a href="#main-content" class="visually-hidden focusable skip-link">
-      {{ 'Skip to main content'|t }}
-    </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
-    <js-bottom-placeholder token="{{ placeholder_token }}">
-    
-  </body>
-</html>
+					<!--swiperのcss -->
+					<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+				</head>
+				<body{{attributes.addClass(body_classes)}}>
+					{#
+										      Keyboard navigation/accessibility link to main content section in
+										      page.html.twig.
+										    #}
+					<!-- 
+										                                                                                                                                                                                                                                   
+										        *****                                                                                                                                                                                      ***                             
+										          ******:                                                                ***                                                              =***                                             ****                            
+										             *******                                                             ****                                                             ****                                              +****                          
+										                ******                                                           ****                                                             ****                                                ****      *******            
+										                   ***                                                           ****             *                                               ***                                                  **************:             
+										                                                                             ****************************                 ***+                   ********                                          ************                    
+										                                                             ****  ***************************************                ***              +********************                              *********** ****                     
+										                                                           *****************      ****                                   ****           *************     :********                          ******        -***+                   
+										                                                          ********=               ****                                   ****        ******      ***-           ****                                         ****                  
+										               .********                                                          ****                                   ****      *****         ***              ****                                        ****         ******* 
+										         ******************                                                       ****                                   ****    *****           ***               ***-                                        ****-+***********   
+										     **********        =*****                                             ************                                   ****   ****            ****                ***                                       ************         
+										  *******                 ****                                          ***     ******                                   **** =***+             ****                ****                                +*************+            
+										 ****                      ****                                        **         ****                                   ********               ****                 ***                           :*********.     ****            
+										                           ****                                       **          ****                                   *******                ****                 ***+                      +********            -***           
+										                           ****                                      ***          ****                                   *******                ****                ****                    ********                  ***+         
+										                           ****                                      ***          ****                                   ******                 ****                ***:                  *****                        ****        
+										                           ****                                       **:         ****                                   *****=                 ****               ****                                                 ****       
+										                           ****                                      ***          ****                                   *****                  ****              ****                                                 +****       
+										                           ****                                     ***          *****                                   ****=                  ****             ****                                               ******+        
+										                          -***                                      **-          *****                                   ****                   ****           *****                                               *****           
+										                          ****                                     ***           *****                                   ****                    ***       .******                       ***                                       
+										                         ****                                      .**-          *****                                   ***                     ***    *******                          ****+                                     
+										                        +***                                        ***          ****-                                                           ***********                               ****+                                   
+										                        ***                                          ***         ****                                                            *******                                     *****                                 
+										                       ****                                            **=       ****                                                            ****                                          *****                               
+										                      ****                                               ***********                                                             ****                                            ******                            
+										                     ****                                                   **  ****                                                             ****                                              +*****                          
+										                    ****                                                        ***                                                              ****                                                 ******                       
+										                   ****                                                        ****                                                              ***=                                                    *****                     
+										                  ****                                                         ***                                                                .                                                        ******                  
+										                 ****                                                          ***                                                                                                                            *****                
+										                :***                                                                                                                                                                                            ***                
+										                                                                                                                                                                                                                                   
+										
+										
+										
+										
+										-->
+						<a href="#main-content" class="visually-hidden focusable skip-link"> {{ 'Skip to main content'|t }}
+					</a>
+					{{ page_top }}
+					{{ page }}
+					{{ page_bottom }}
+					<js-bottom-placeholder token="{{ placeholder_token }}"></body>
+				</html>

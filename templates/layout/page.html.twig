@@ -47,70 +47,74 @@
 #}
 <div class="tw-container tw-mx-auto tw-p-4">
 
-  <header id="usuyuki-page-top" role="banner" class="pt-2"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
-  <div class="w-full flex justify-between">
-  <h2 class="text-2xl shippori-mincho yomogi ml-4"><a href="/">うすゆきポートフォリオ</a></h2>
-  <div class="md:mr-12">
-    {{ page.header }}
-  </div>
-  </div>
+	<header id="usuyuki-page-top" role="banner" class="pt-2" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-header-re.svg")'>
+		<div class="w-full flex justify-between">
+			<h2 class="text-2xl shippori-mincho yomogi ml-4">
+				<a href="/">うすゆきポートフォリオ</a>
+			</h2>
+			<div class="md:mr-12">
+				{{ page.header }}
+			</div>
+		</div>
 
 
+		{# {{ page.primary_menu }} #}
+	{# {{ page.secondary_menu }} #}
 
-  {# {{ page.primary_menu }} #}
-  {# {{ page.secondary_menu }} #}
+		{# {{ page.breadcrumb }} #}
 
-  {# {{ page.breadcrumb }} #}
+		{# {{ page.highlighted }} #}
 
-  {# {{ page.highlighted }} #}
+		{# {{ page.help }} #}
+	</header>
 
-  {# {{ page.help }} #}
-  </header>
+	<main role="main">
+		<a id="main-content" tabindex="-1"></a>
+		{# link is in html.html.twig #}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+		<div class="md:tw-flex tw--mx-4">
+			<div class="md:tw-flex-1 tw-p-4">
+				{{ page.content }}
+				{{ content.	field_works_tech }}
+			</div>
+			{# /.layout-content #}
 
-    <div class="md:tw-flex tw--mx-4">
-      <div class="md:tw-flex-1 tw-p-4">
-        {{ page.content }}
-        {{ content.	field_works_tech }}
-      </div>{# /.layout-content #}
+			{% if page.sidebar_first %}
+				<aside class="md:tw-w-1/4 tw-p-4" role="complementary">
+					{{ page.sidebar_first }}
+				</aside>
+			{% endif %}
 
-      {% if page.sidebar_first %}
-        <aside class="md:tw-w-1/4 tw-p-4" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
+			{% if page.sidebar_second %}
+				<aside class="md:tw-w-1/4" role="complementary">
+					{{ page.sidebar_second }}
+				</aside>
+			{% endif %}
+		</div>
+	</main>
 
-      {% if page.sidebar_second %}
-        <aside class="md:tw-w-1/4" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-    </div>
-  </main>
+	{% if page.footer %}
+		<footer class="footer-img relative mt-4  py-4  " role="contentinfo" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
 
-  {% if page.footer %}
-    <footer class="footer-img relative mt-4  py-4  " role="contentinfo"style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
+			<div class="bubbles ">
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+			</div>
 
-   <div class="bubbles ">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
+			<div class="w-full flex items-center justify-end   z-10">
+				<a href="#usuyuki-page-top" class="">
+					<img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
+				</div>
+				<div class="mx-auto flex items-end">
+					{{ page.footer }}
+				</div>
 
-    <div class="w-full flex items-center justify-end   z-10">
-    <a href="#usuyuki-page-top" class="">
-     <img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
-    </div>
-   <div class="mx-auto flex items-end">
-      {{ page.footer }}
-      </div>
+			</footer>
 
-    </footer>
- 
-  {% endif %}
+		{% endif %}
 
-</div>{# /.layout-container #}
+	</div>
+	{# /.layout-container #}
