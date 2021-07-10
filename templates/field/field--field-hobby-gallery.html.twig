@@ -18,7 +18,7 @@
 </script> #}
 
 <!-- スライダーのメインコンテナの div 要素 -->
-<div class="swiper-container my-4" id="works_gallery"> 
+<div class="swiper-container my-4 works_gallery"> 
   <!-- ラッパーの（スライドを囲む） div 要素 -->
   <div class="swiper-wrapper"> 
     <!-- それぞれのスライドの div 要素 -->
@@ -42,7 +42,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
     
-let works_swiper = new Swiper ('#works_gallery', {
+let works_swiper = new Swiper ('.works_gallery', {
   // デフォルトの設定
   slidesPerView: 1,
   spaceBetween: 0,

@@ -82,10 +82,10 @@
 		<div
 			class="frontpage-thub h-auto">
 			<!--下記デザインは 
-																																				        Copyright©2020Codrops
-																																				        Released under the MIT license
-																																				        http://tympanus.net/codrops/licensing/ 
-																																				        -->
+			Copyright©2020Codrops
+			Released under the MIT license
+			http://tympanus.net/codrops/licensing/ 
+			-->
 			{{ page.content }}
 		</div>
 		{# </div> #}
@@ -94,7 +94,11 @@
 
 	{% if page.footer %}
 		<footer class="footer-img relative mt-4  py-4  " role="contentinfo" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
-
+			<div class="mx-auto relative z-10">
+				<a href="/works">
+					<p class="bg-secondary-color p-4 rounded-2xl">もっと見る</p>
+				</a>
+			</div>
 			<div class="bubbles ">
 				<div class="bubble"></div>
 				<div class="bubble"></div>
