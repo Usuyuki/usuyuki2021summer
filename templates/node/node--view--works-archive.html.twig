@@ -1,7 +1,9 @@
 <article class="archive-img p-2 mx-4 my-12 flex justify-center items-center flex-wrap kiwi-maru ">
-	{{ content.field_works_thumbnail }}
+	<a href="{{ url }}">{{ content.field_works_thumbnail }}</a>
 	<div class="m-4 archive-text-size ">
-		<h2 class="text-2xl yomogi font-bold my-2 md:text-left text-center">{{ label[0] }}</h2>
+		<h2 class="text-2xl yomogi font-bold my-2 md:text-left text-center">
+			<a href="{{ url }}">{{ label[0] }}</a>
+		</h2>
 		<p class="text-xl md:text-left text-center">{{content.field_works_deploy_start[0]}}</p>
 		<p class="text-xl  md:text-left text-center">ジャンル:{{content.field_works_genre[0]}}</p>
 		<p class="text-xl  md:text-left text-center">形態:{{content.field_works_scale[0]}}</p>
