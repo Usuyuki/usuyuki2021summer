@@ -80,46 +80,45 @@
 		role="main">
 		{# <div class="flex justify-center flex-wrap w-100"> #}
 		<div
-			class="frontpage-thub ">
-			<!--
-						  下記デザインは 
-						  Copyright©2020Codrops
-						Released under the MIT license
-						http://tympanus.net/codrops/licensing/ -->
+			class="frontpage-thub h-auto">
+			<!--下記デザインは 
+																																	        Copyright©2020Codrops
+																																	        Released under the MIT license
+																																	        http://tympanus.net/codrops/licensing/ 
+																																	        -->
 			{{ page.content }}
 		</div>
 		{# </div> #}
 	</main>
-</div>
-<div class="mx-auto">
-	<a href="/works">
-		<p class="bg-secondary-color p-2 rounded-2xl">More</p>
-	</a>
-	<div>
 
-		{% if page.footer %}
 
-			<footer class="footer-img relative mt-4  py-4  " role="contentinfo" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
+	{% if page.footer %}
 
-				<div class="bubbles ">
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
+		<footer class="footer-img relative mt-4  py-4  " role="contentinfo" style='background-image:url("{{ base_path ~ directory }}/images/bg/wave-haikei-footer-re.svg")'>
+			<div class="mx-auto relative z-10">
+				<a href="/works">
+					<p class="bg-secondary-color p-4 rounded-2xl">もっと見る</p>
+				</a>
+			</div>
+			<div class="bubbles ">
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+			</div>
+
+			<div class="w-full flex items-center justify-end   z-10">
+				<a href="#usuyuki-page-top" class="">
+					<img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
+				</div>
+				<div class="mx-auto flex items-end">
+					{{ page.footer }}
 				</div>
 
-				<div class="w-full flex items-center justify-end   z-10">
-					<a href="#usuyuki-page-top" class="">
-						<img class="footer-fish mr-4 md:mr-12" src="{{ base_path ~ directory }}/images/icons/sakanaKey_animated.svg">
-					</div>
-					<div class="mx-auto flex items-end">
-						{{ page.footer }}
-					</div>
+			</footer>
 
-				</footer>
+		{% endif %}
 
-			{% endif %}
-
-		</div>
-		{# /.layout-container #}
+	</div>
+	{# /.layout-container #}
