@@ -3,6 +3,11 @@ global-styling:
  css:
    theme:
      dist/tailwind_usuyuki.css: {}
+     css/foundation.css: {}
+     css/header.css: {}
+     css/footer.css: {}
+     css/archive.css: {}
+     css/front_page.css: {}
      css/styles.css: {}
 
 global-scripts:

@@ -1,0 +1,68 @@
+/** @format */
+
+/* swiperの点 */
+
+/* .swiper-pagination-bullet{
+	background-color: var(--bg-secondary-color)!important;
+} */
+.swiper-pagination-bullet-active{
+	background-color:#C4DDF2!important;
+}
+
+/* アーカイブページの画像 */
+.archive-img img {
+	border-radius: 5px;
+	object-fit: cover;
+	width: 300px;
+	height: 300px;
+}
+.archive-text-size{
+	width: 800px;
+}
+
+
+  /* アーカイブページページタイトル */
+  .page-title{
+	font-size: 4em;
+	text-align: center;
+	margin-bottom: 40px;
+	font-family: 'Yomogi', cursive;
+}
+/* 技術スタック系 */
+.tech-stack-wrapper{
+	border:1px solid gray;
+	margin:1em 1em;
+}
+.tech-stack-row{
+	margin:1em 1em;
+	width:30%;
+}
+.tech-stack-row{
+	margin:1em 1em;
+	width:30%;
+}
+.tech-stack-list{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.block-views >h2{
+	font-size: 3em;
+	text-align: center;
+	font-family: 'Yomogi', cursive;
+}
+@media screen and (max-width: 768px) {
+	.archive-text-size{
+		width: 300px;
+		margin:10px auto;
+	}
+	.page-title{
+		font-size: 2em;
+		font-weight: bold;
+	}
+	.tech-stack-row{
+		width:100%;
+	}
+  }
+
+

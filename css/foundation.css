@@ -1,0 +1,59 @@
+:root{
+    --bg-main-color:#fff9f2;
+    --bg-secondary-color:#deffd6;
+    --bg-thirdly-color:#C4DDF2;
+    --text-main-color:#3e3a39;
+    --text-secondary-color:#f2dec3;
+    --text-alert-color:#f1a008;
+  }
+  
+  .bg-main-color{
+    background-color: var(--bg-main-color);
+  }
+  
+  .bg-secondary-color{
+    background-color: var(--bg-secondary-color);
+  }
+  .bg-thirdly-color{
+    background-color: var(--bg-thirdly-color);
+  }
+  
+  .text-main-color{
+    color: var( --bg-main-color);
+  }
+  .text-bg-color{
+    color: var(--text-main-color);
+  }
+  
+  .text-secondary-color{
+    color: var(--text-secondary-color);
+  }
+  .text-alert-color{
+    color: var(--text-alert-color);
+  }
+  
+  
+  html{
+    /* tailwindの設定だと変なフォントになるので */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+    color: var(--text-main-color);
+    background-color: var(--bg-main-color);
+    scroll-behavior:smooth;
+  }
+
+
+  /* フォント */
+.kiwi-maru{
+    font-family: 'Kiwi Maru', serif;
+  }
+  
+  .shippori-mincho{
+    font-family: 'Shippori Mincho', serif;
+  }
+  .yomogi{
+    font-family: 'Yomogi', cursive;
+  }
+  .playfair{
+    font-family: 'Playfair Display', serif;
+  }
