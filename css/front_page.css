@@ -45,7 +45,7 @@ http://tympanus.net/codrops/licensing/  */
 .frontpage-thub figure figcaption {
 	padding: 2em;
 	color: var(--bg-main-color);
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;

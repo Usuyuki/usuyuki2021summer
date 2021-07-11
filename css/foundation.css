@@ -40,6 +40,7 @@
     color: var(--text-main-color);
     background-color: var(--bg-main-color);
     scroll-behavior:smooth;
+    word-break: break-all;
   }
 
 
@@ -57,3 +58,71 @@
   .playfair{
     font-family: 'Playfair Display', serif;
   }
+
+  /* 
+スクロールバー
+ここから 
+*/
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  /* background-color: var(--border-main-color); */
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); */
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-main-color);
+  border-radius: 10px;
+  /* box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3); */
+}
+
+
+
+/* 
+ここまで 
+スクロールバー
+*/
+
+
+
+/* ボタン系 */
+.link-button-normal{
+  color: var(--text-main-color);
+  background-color: var(--bg-secondary-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: 1.0s ;
+}
+
+.link-button-normal:hover{
+  color: var(--bg-secondary-color);
+  background-color: var(--text-main-color);
+}
+
+.genre-button-normal{
+  color: var(--text-main-color);
+  background-color: var(--bg-thirdly-color);
+  /* border-radius: 4px; */
+  padding: 0.5rem;
+
+  transition: 1.0s ;
+  margin:1rem 1rem;
+}
+
+.genre-button-normal:hover{
+  color: var(--bg-thirdly-color);
+  background-color: var(--text-main-color);
+}
+
+.views-element-container h2{
+  margin-top:1em;
+}

@@ -51,6 +51,16 @@
 	text-align: center;
 	font-family: 'Yomogi', cursive;
 }
+
+/* 趣味ページの画像サイズ */
+.hobby-img-cover img{
+	object-fit: cover;
+	width:600px;
+	height:400px;
+	margin:0 5px;
+	border-radius: 5px;
+}
+
 @media screen and (max-width: 768px) {
 	.archive-text-size{
 		width: 300px;
@@ -63,6 +73,26 @@
 	.tech-stack-row{
 		width:100%;
 	}
+	.hobby-img-cover img{
+
+		width:280px;
+		height: 400px;
+	}
   }
 
+  /* 趣味ページの縞模様 */
+.view-quweiakaifu-active div[class*="views-row"],.view-quweiakaifu-katsutenoquwei div[class*="views-row"]{
+padding:1em 4px;
+}
+.view-quweiakaifu-active div[class*="views-row"]:nth-of-type(even),.view-quweiakaifu-katsutenoquwei div[class*="views-row"]:nth-of-type(even){
+background-color: var(--bg-secondary-color);
+}
 
+
+
+/* 絞り込みの決定ボタン */
+.form--inline{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap	;
+}
